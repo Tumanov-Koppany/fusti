@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bejegyzéskezelő</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-storage.js"></script>
+</head>
+<body>
+  <!-- Bejelentkezési űrlap -->
+  <div id="login-container">
+    <h2>Bejelentkezés</h2>
+    <input type="email" id="email" placeholder="Email" required>
+    <input type="password" id="password" placeholder="Jelszó" required>
+    <button id="login">Bejelentkezés</button>
+  </div>
+
+  <!-- Adminisztrátor panel -->
+  <div id="admin-container" style="display:none;">
+    <h2>Adminisztrátor Panel</h2>
+    <p>Üdvözöljük az Adminisztrátorok oldalán!</p>
+    <button id="logout">Kijelentkezés</button>
+  </div>
+
+  <!-- Felhasználói panel -->
+  <div id="user-container" style="display:none;">
+    <h2>Felhasználói Panel</h2>
+    <h3>Új bejegyzés</h3>
+    <textarea id="postContent" placeholder="Írja be a bejegyzést..."></textarea>
+    <input type="file" id="fileUpload">
+    <button id="submitPost">Bejegyzés létrehozása</button>
+    <button id="logout">Kijelentkezés</button>
+    
+    <h3>Bejegyzések</h3>
+    <div id="posts"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

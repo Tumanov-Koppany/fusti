@@ -25,7 +25,7 @@ const auth = firebase.auth();
 const db = firebase.firestore();
 
 // Adminisztrátor e-mail cím
-const adminEmail = "admin@example.com";
+const adminEmail = "tumanovkoppany2023@gmail.com";
 
 // Bejegyzések betöltése
 function loadPosts() {
